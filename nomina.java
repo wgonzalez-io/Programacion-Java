@@ -11,7 +11,7 @@ public class nomina {
         //Aqui ya empezamos a pedir los datos hasta que sea valido
         do{
         System.out.println("Ingrese el nombre del trabajador: ");
-        nombreTrabajador=sc.nextLine().trim();
+        nombreTrabajador=sc.nextLine().trim(); //El trim es para evitar que metan espacios en blanco
         if(nombreTrabajador.matches(letras) && nombreTrabajador.length()>=15){
             System.out.println("\nNombre registrado con éxito");
         }
