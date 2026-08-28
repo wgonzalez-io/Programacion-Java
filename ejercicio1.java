@@ -16,7 +16,7 @@ public class ejercicio1 {
         try{
             calificación = Integer.parseInt(sc.nextLine());
         } catch (NumberFormatException e){
-            System.out.println("Solo puedes ingresar numeros enteros, no decimales ejemplo: 80");
+            System.out.println("Solo puedes ingresar numeros enteros, ejemplo: 80");
         }
         if (calificación >=  0 && calificación <= 100){
             switch (calificación / 10) {
