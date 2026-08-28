@@ -3,7 +3,8 @@ public class nomina {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String nombreTrabajador, dato1, dato2;
-        float precioHora=0, salarioBruto,impuesto,horasTrabajadas=0,horaExtra, salarioNeto;
+        float precioHora=0, salarioBruto,impuesto, salarioNeto, horaExtra;
+        int horasTrabajadas=0;
         boolean valid=true;
         String letras = "[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+";
 
@@ -27,7 +28,7 @@ public class nomina {
             try{
                 System.out.println("Ingrese las horas trabajadas: ");
                 dato1=sc.nextLine();
-                horasTrabajadas=Float.parseFloat(dato1);
+                horasTrabajadas=Integer.parseInt(dato1);
                 if(horasTrabajadas<=0){
                     System.out.println("\nDebe ingresar una cantidad mayor a 0");
                     valid=false;
@@ -37,7 +38,7 @@ public class nomina {
                     valid=true;
                 }
             }catch(NumberFormatException e){
-                System.out.println("\nSolo puedes ingresar numeros");
+                System.out.println("\nSolo puedes ingresar numeros enteros positivos, no decimales ejemplo: 1,2,3,4,5");
                 valid=false;
             }
         }while(!valid);
